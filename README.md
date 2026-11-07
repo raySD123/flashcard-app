@@ -19,3 +19,7 @@ Question,Answer
 npm install
 npm run dev
 ```
+
+## Deploy to GitHub Pages
+
+The GitHub Actions workflow builds the site for this repository's Pages path and deploys it whenever changes are pushed to `master`. To enable deployment, open the repository's **Settings → Pages**, select **GitHub Actions** as the build and deployment source, and save. You can also start a deployment manually from the **Actions** tab.
