@@ -1,0 +1,502 @@
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  width: min(100% - 32px, 720px);
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.topbar {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+main {
+  padding: 32px 0;
+}
+
+.library-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.panel {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.panel h2,
+.complete-view h2 {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.panel p {
+  color: #555;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.file-picker {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  padding: 0 12px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.file-picker:hover,
+.secondary-button:hover,
+.review-button:not(:disabled):hover {
+  background: #f3f3f3;
+}
+
+.file-picker input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+}
+
+.error-message {
+  color: #b42318 !important;
+}
+
+.file-list {
+  min-width: 0;
+  max-height: 180px;
+  overflow: auto;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+  color: #555;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.uploaded-file {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.uploaded-file-name {
+  min-width: 0;
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.remove-file-button {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.remove-file-button:hover {
+  background: #eee;
+  color: #444;
+}
+
+.preview-panel {
+  grid-column: 1 / -1;
+}
+
+.cards-preview {
+  max-height: 380px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.preview-card {
+  display: flex;
+  min-height: 82px;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 13px 4px;
+  border-top: 1px solid #eee;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 82px;
+}
+
+.preview-card-number {
+  width: 28px;
+  flex: none;
+  padding-top: 2px;
+  color: #666;
+  font-size: 12px;
+  text-align: right;
+}
+
+.preview-card-sides {
+  display: grid;
+  min-width: 0;
+  flex: 1;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.preview-card-sides p {
+  min-width: 0;
+  margin: 0;
+  color: #222;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.preview-card-sides p span {
+  display: block;
+  margin-bottom: 4px;
+  color: #666;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.shuffle-control {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 16px 0;
+  font-size: 13px;
+}
+
+button {
+  font: inherit;
+}
+
+.primary-button,
+.secondary-button,
+.review-button,
+.plain-button {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background: white;
+  color: #111;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.primary-button {
+  border-color: #222;
+  background: #222;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #444;
+}
+
+.study-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.study-actions > button {
+  flex: 1;
+}
+
+.study-view {
+  width: min(100%, 560px);
+  margin: 0 auto;
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 13px;
+}
+
+.shuffle-button {
+  min-height: 30px;
+  padding: 0 9px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background: white;
+  color: #111;
+  cursor: pointer;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.review-tools {
+  display: flex;
+  flex: none;
+  gap: 6px;
+}
+
+.undo-button {
+  min-height: 30px;
+  padding: 0 9px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background: white;
+  color: #111;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.undo-button:not(:disabled):hover {
+  background: #f3f3f3;
+}
+
+.undo-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.shuffle-button[aria-pressed='true'] {
+  border-color: #222;
+  background: #222;
+  color: white;
+}
+
+.shuffle-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.flashcard-scene {
+  perspective: 1200px;
+}
+
+.flashcard-scene.sorting-left .flashcard {
+  animation: sort-left 250ms ease-in forwards;
+}
+
+.flashcard-scene.sorting-right .flashcard {
+  animation: sort-right 250ms ease-in forwards;
+}
+
+.flashcard {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 300px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  color: #111;
+  cursor: pointer;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 450ms cubic-bezier(0.2, 0.75, 0.25, 1), background-color 50ms linear, color 50ms linear;
+}
+
+.flashcard.is-flipped {
+  transform: rotateX(180deg);
+}
+
+.flashcard:disabled {
+  cursor: default;
+}
+
+.flashcard-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 18px;
+  overflow: hidden;
+  padding: 32px;
+  border-radius: inherit;
+  background: inherit;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flashcard-front {
+  transform: rotateY(0deg);
+}
+
+.flashcard-back {
+  transform: rotateX(180deg);
+}
+
+@keyframes sort-left {
+  0% {
+    background-color: white;
+    color: #111;
+    opacity: 1;
+    transform: translateX(0) rotate(0) scale(1);
+  }
+  25% {
+    transform: translateX(-8px) rotate(-10deg) scale(1.02);
+  }
+  55% {
+    background-color: #e87929;
+    color: white;
+    opacity: 1;
+    transform: translateX(-14px) rotate(-10deg) scale(1.02);
+  }
+  100% {
+    background-color: #e87929;
+    color: white;
+    opacity: 0;
+    transform: translate(-90px, 12px) rotate(-10deg) scale(0.92);
+  }
+}
+
+@keyframes sort-right {
+  0% {
+    background-color: white;
+    color: #111;
+    opacity: 1;
+    transform: translateX(0) rotate(0) scale(1);
+  }
+  25% {
+    transform: translateX(8px) rotate(10deg) scale(1.02);
+  }
+  55% {
+    background-color: #5b9669;
+    color: white;
+    opacity: 1;
+    transform: translateX(14px) rotate(10deg) scale(1.02);
+  }
+  100% {
+    background-color: #5b9669;
+    color: white;
+    opacity: 0;
+    transform: translate(90px, 12px) rotate(10deg) scale(0.92);
+  }
+}
+
+.card-content {
+  display: flex;
+  width: 100%;
+  min-height: 0;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 32px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.pile-count {
+  margin-top: 12px;
+}
+
+.review-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.review-button {
+  min-height: 42px;
+}
+
+.review-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.complete-view {
+  width: min(100%, 420px);
+  margin: 24px auto;
+  text-align: center;
+}
+
+.completion-actions {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.completion-actions > button {
+  width: 100%;
+}
+
+.plain-button {
+  border-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .library-view {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-panel {
+    grid-column: auto;
+  }
+
+  .preview-card-sides {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .flashcard {
+    min-height: 260px;
+  }
+
+  .progress-row {
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .study-actions {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}
